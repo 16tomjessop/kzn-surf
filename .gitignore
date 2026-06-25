@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Editor / agent local config
+.claude/
+.vscode/
+
+# Backups
+*.bak
+*.bak-*
+styles.css.bak-*
+
+# Xcode
+KZNSurfIOS/**/xcuserdata/
+KZNSurfIOS/**/*.xcuserstate
+KZNSurfIOS/**/DerivedData/
+build/
+
+# Logs / temp
+*.log
+.tmp/

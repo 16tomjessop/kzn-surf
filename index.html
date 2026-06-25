@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1622" />
+  <meta name="apple-mobile-web-app-title" content="Surf Journal" />
+  <meta name="application-name" content="Surf Journal" />
+  <title>Surf Journal</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="title">
+      <h1>Surf Journal</h1>
+    </div>
+    <button id="refreshBtn" class="icon-btn" title="Refresh" aria-label="Refresh">⟳</button>
+  </header>
+
+  <nav class="view-tabs" aria-label="Main pages">
+    <button class="view-tab active" data-view="home">Home</button>
+    <button class="view-tab" data-view="spots">All Spots</button>
+  </nav>
+
+  <nav id="dayTabs" class="day-tabs" aria-label="Forecast days"></nav>
+
+  <div id="controls" class="controls"></div>
+
+  <section id="ask" class="ask" aria-label="Ask about the surf">
+    <form id="askForm" class="ask-form" autocomplete="off">
+      <input id="askInput" class="ask-input" type="text" enterkeyhint="search"
+             placeholder="Ask: is it good at Scottburgh tomorrow morning?" aria-label="Ask about the surf" />
+      <button class="ask-clear" id="askClear" type="button" hidden>Clear</button>
+      <button class="ask-submit" type="submit">Ask</button>
+    </form>
+    <div class="ask-egs">
+      <button type="button" class="ask-eg">Is it good at Scottburgh tomorrow morning?</button>
+      <button type="button" class="ask-eg">How's North Beach Saturday afternoon?</button>
+      <button type="button" class="ask-eg">Scottburgh or North Beach at dawn Friday?</button>
+    </div>
+    <div id="askAnswer" class="ask-answer" hidden></div>
+  </section>
+
+  <main id="breakList" class="break-list">
+    <div class="loading">Loading forecast…</div>
+  </main>
+
+  <footer class="app-footer">
+    <span id="updated">—</span>
+    <span class="src">Data: Open-Meteo multi-model consensus (ECMWF · DWD · GFS · ICON) · Ratings use spot angle, wind, swell, and tide</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

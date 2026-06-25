@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>KZN Surf Flow Preview</title>
+  <link rel="stylesheet" href="flow-preview.css" />
+</head>
+<body>
+  <header class="preview-header">
+    <div>
+      <p class="eyebrow">Flow preview</p>
+      <h1>Home Read → Spot Overview → Detailed Report</h1>
+    </div>
+    <nav aria-label="Preview links">
+      <a href="mockups.html">Mockup board</a>
+      <a href="index.html">Live app</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="flow-note">
+      <b>Concept</b>
+      <p>The home page carries the Option C newspaper-style surf read. Tapping a spot opens a spot page with an Option D quick overview first, then the detailed report further down.</p>
+    </section>
+
+    <section class="prototype" aria-label="Home and spot detail preview">
+      <article class="stage">
+        <div class="stage-label">
+          <span>Home page</span>
+          <b>Daily surf read</b>
+        </div>
+
+        <div class="phone home-phone">
+          <header class="masthead">
+            <div>
+              <span>KZN Surf Journal</span>
+              <h2>Morning Read</h2>
+            </div>
+            <button aria-label="Refresh">↻</button>
+          </header>
+
+          <section class="home-story">
+            <span>South Coast · Monday 22 June</span>
+            <h3>Clean early, lumpy by lunch.</h3>
+            <p>Hunt the protected corners first. Scottburgh gets the friendliest morning window, while Green Point has the bigger walls once the tide starts dropping.</p>
+          </section>
+
+          <section class="today-strip" aria-label="Daily timing">
+            <div>
+              <span>Best window</span>
+              <b>06:00-10:00</b>
+            </div>
+            <div>
+              <span>Wind shift</span>
+              <b>NE after 11</b>
+            </div>
+            <div>
+              <span>Low tide</span>
+              <b>10:42</b>
+            </div>
+          </section>
+
+          <section class="home-visual" aria-label="Surf illustration">
+            <div class="sun"></div>
+            <div class="wave wave-a"></div>
+            <div class="wave wave-b"></div>
+            <div class="wave wave-c"></div>
+          </section>
+
+          <section class="spot-picks" aria-label="Spot picks">
+            <div class="section-head">
+              <span>Tap into a spot</span>
+              <b>Top options</b>
+            </div>
+
+            <button class="spot-card active" data-spot="Scottburgh">
+              <span class="rating good">8.4</span>
+              <span class="spot-copy">
+                <b>Scottburgh</b>
+                <em>Chest high · WNW offshore · best early</em>
+              </span>
+              <span class="arrow">›</span>
+            </button>
+            <button class="spot-card" data-spot="Green Point">
+              <span class="rating goodish">7.1</span>
+              <span class="spot-copy">
+                <b>Green Point</b>
+                <em>More size · tide-sensitive · stronger walls</em>
+              </span>
+              <span class="arrow">›</span>
+            </button>
+            <button class="spot-card" data-spot="North Beach">
+              <span class="rating fair">4.6</span>
+              <span class="spot-copy">
+                <b>North Beach</b>
+                <em>Small and soft · exposed to the later wind</em>
+              </span>
+              <span class="arrow">›</span>
+            </button>
+          </section>
+        </div>
+      </article>
+
+      <article class="stage">
+        <div class="stage-label">
+          <span>Spot page</span>
+          <b>Quick overview, then details</b>
+        </div>
+
+        <div class="phone detail-phone">
+          <header class="spot-mast">
+            <button aria-label="Back to home">‹</button>
+            <div>
+              <span id="detailRegion">Upper South Coast</span>
+              <h2 id="detailName">Scottburgh</h2>
+            </div>
+            <strong id="detailScore">8.4</strong>
+          </header>
+
+          <section class="quick-read">
+            <span>Quick overview</span>
+            <h3 id="detailHeadline">Go early while the WNW keeps it clean.</h3>
+            <p id="detailSummary">Best two-hour pulse is around 06:00-08:00, with enough size for most boards and a forgiving dropping tide.</p>
+          </section>
+
+          <section class="overview-card">
+            <div class="tide-sketch" aria-hidden="true">
+              <span class="tide-dot low"></span>
+              <span class="tide-dot now"></span>
+              <span class="tide-dot high"></span>
+            </div>
+            <div>
+              <b>Dropping tide</b>
+              <span>Low at 10:42 · cleanest before the NE turns</span>
+            </div>
+          </section>
+
+          <section class="two-hour-overview" aria-label="Two hour overview">
+            <article class="slot best">
+              <time>06-08</time>
+              <div>
+                <b id="slotOneTitle">Best push</b>
+                <span id="slotOneText">Chest high, clean, WNW offshore</span>
+              </div>
+              <em id="slotOneRating">8.4</em>
+            </article>
+            <article class="slot good">
+              <time>08-10</time>
+              <div>
+                <b>Still worthwhile</b>
+                <span>Dropping tide, wind beginning to texture</span>
+              </div>
+              <em>7.6</em>
+            </article>
+            <article class="slot watch">
+              <time>10-12</time>
+              <div>
+                <b>Watch the wind</b>
+                <span>South corners last longer than Durban</span>
+              </div>
+              <em>5.2</em>
+            </article>
+            <article class="slot poor">
+              <time>12-14</time>
+              <div>
+                <b>Messy leftovers</b>
+                <span>Only sheltered banks worth a look</span>
+              </div>
+              <em>3.1</em>
+            </article>
+          </section>
+
+          <section class="detail-report">
+            <div class="report-title">
+              <span>Scroll for detail</span>
+              <h3>Detailed report</h3>
+            </div>
+
+            <div class="factor-grid">
+              <article>
+                <span>Swell</span>
+                <b id="swellDetail">1.3 m · 11 s</b>
+                <em>Enough push for chest-high sets.</em>
+              </article>
+              <article>
+                <span>Wind</span>
+                <b id="windDetail">WNW · 7 km/h</b>
+                <em>Clean early, textured late morning.</em>
+              </article>
+              <article>
+                <span>Shape</span>
+                <b id="shapeDetail">Peeling corners</b>
+                <em>Banks favour the dropping tide.</em>
+              </article>
+              <article>
+                <span>Water</span>
+                <b>21°C</b>
+                <em>Comfortable with a light suit.</em>
+              </article>
+            </div>
+
+            <section class="report-panel">
+              <div class="panel-head">
+                <b>Tide curve</b>
+                <span>Now to sunset</span>
+              </div>
+              <div class="wide-curve">
+                <span class="marker m1"></span>
+                <span class="marker m2"></span>
+                <span class="marker m3"></span>
+              </div>
+            </section>
+
+            <section class="report-panel">
+              <div class="panel-head">
+                <b>Hour by hour</b>
+                <span>Readable detail after the recap</span>
+              </div>
+              <div class="hour-table">
+                <div><time>06:00</time><span>8.4</span><b>Clean</b><em>Chest · WNW</em></div>
+                <div><time>08:00</time><span>7.6</span><b>Good</b><em>Chest · cross-off</em></div>
+                <div><time>10:00</time><span>5.2</span><b>Fair</b><em>Texture building</em></div>
+                <div><time>12:00</time><span>3.1</span><b>Poor</b><em>Onshore wobble</em></div>
+                <div><time>14:00</time><span>2.8</span><b>Poor</b><em>Messy, weak</em></div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="flow-preview.js"></script>
+</body>
+</html>
